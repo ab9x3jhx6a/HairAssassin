@@ -9,6 +9,7 @@ import flixel.FlxGame;
 import flixel.FlxState;
 import flixel.FlxG;
 import flixel.text.FlxText;
+import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
 
 /**
@@ -18,6 +19,8 @@ import flixel.util.FlxColor;
 class StartState extends FlxState
 {
 	var labelTest:FlxText;
+	
+	private var startBtn:FlxButton;
 
 	public function new() 
 	{
@@ -39,6 +42,7 @@ class StartState extends FlxState
 	
 	override public function update():Void
 	{
+		
 		if (FlxG.keys.justPressed.SPACE) FlxG.switchState(new CutScene1());
 		super.update();
 	}	
